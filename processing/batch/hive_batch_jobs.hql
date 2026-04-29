@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS ecommerce_raw;
+USE ecommerce_raw;
+CREATE EXTERNAL TABLE IF NOT EXISTS orders_raw (order_id BIGINT, customer_id BIGINT, product_id BIGINT, order_date STRING, amount DOUBLE, status STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE LOCATION 'hdfs://localhost:9000/data/raw/orders/';
+CREATE EXTERNAL TABLE IF NOT EXISTS customers_raw (customer_id BIGINT, name STRING, email STRING, city STRING, signup_date STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE LOCATION 'hdfs://localhost:9000/data/raw/customers/';
+CREATE DATABASE IF NOT EXISTS ecommerce_analytics;
+USE ecommerce_analytics;
+CREATE TABLE IF NOT EXISTS orders_orc (order_id BIGINT, customer_id BIGINT, product_id BIGINT, order_date DATE, amount DOUBLE, status STRING) STORED AS ORC LOCATION 'hdfs://localhost:9000/data/analytics/orders_orc/';
+INSERT OVERWRITE TABLE orders_orc SELECT order_id, customer_id, product_id, TO_DATE(order_date), amount, status FROM ecommerce_raw.orders_raw WHERE order_id IS NOT NULL AND amount > 0;
+CREATE TABLE IF NOT EXISTS customer_behavior AS SELECT c.customer_id, c.name, c.city, COUNT(o.order_id) AS total_orders, SUM(o.amount) AS total_spent, AVG(o.amount) AS avg_order_value FROM ecommerce_raw.customers_raw c LEFT JOIN orders_orc o ON c.customer_id = o.customer_id GROUP BY c.customer_id, c.name, c.city;
+CREATE TABLE IF NOT EXISTS daily_revenue AS SELECT order_date, COUNT(order_id) AS total_orders, SUM(amount) AS total_revenue, AVG(amount) AS avg_order_value FROM orders_orc GROUP BY order_date;

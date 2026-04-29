@@ -1,0 +1,6 @@
+review_id,customer_id,product_id,rating,review_text,review_date
+R001,C001,P001,5.0,Amazing headphones great sound quality,2024-01-10
+R002,C002,P002,4.0,Good running shoes very comfortable,2024-01-11
+R003,C003,P003,3.5,Decent water bottle but lid leaks,2024-01-12
+R004,C004,P001,4.5,Excellent noise cancellation worth the price,2024-01-13
+R005,C005,P004,5.0,Best bluetooth speaker I have ever owned,2024-01-14

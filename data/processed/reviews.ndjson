@@ -1,0 +1,5 @@
+{"review_id": "R001", "customer_id": "C001", "product_id": "P001", "rating": 5.0, "review_text": "Amazing headphones great sound quality", "review_date": "2024-01-10", "sentiment": null}
+{"review_id": "R002", "customer_id": "C002", "product_id": "P002", "rating": 4.0, "review_text": "Good running shoes very comfortable", "review_date": "2024-01-11", "sentiment": null}
+{"review_id": "R003", "customer_id": "C003", "product_id": "P003", "rating": 3.5, "review_text": "Decent water bottle but lid leaks", "review_date": "2024-01-12", "sentiment": null}
+{"review_id": "R004", "customer_id": "C004", "product_id": "P001", "rating": 4.5, "review_text": "Excellent noise cancellation worth the price", "review_date": "2024-01-13", "sentiment": null}
+{"review_id": "R005", "customer_id": "C005", "product_id": "P004", "rating": 5.0, "review_text": "Best bluetooth speaker I have ever owned", "review_date": "2024-01-14", "sentiment": null}

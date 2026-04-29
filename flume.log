@@ -1,0 +1,837 @@
+05 Mar 2026 13:35:15,903 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+05 Mar 2026 13:35:15,909 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+05 Mar 2026 13:35:15,911 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+05 Mar 2026 13:35:15,912 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+05 Mar 2026 13:35:15,913 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+05 Mar 2026 13:35:15,915 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+05 Mar 2026 13:35:15,916 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+05 Mar 2026 13:35:15,917 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+05 Mar 2026 13:35:15,918 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+05 Mar 2026 13:35:15,919 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+05 Mar 2026 13:35:15,920 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+05 Mar 2026 13:35:15,921 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+05 Mar 2026 13:35:15,922 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+05 Mar 2026 13:35:15,923 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+05 Mar 2026 13:35:15,924 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+05 Mar 2026 13:35:15,925 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+05 Mar 2026 13:35:15,926 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+05 Mar 2026 13:35:15,927 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1117)  - Added sinks: hdfs_sink Agent: weblog_agent
+05 Mar 2026 13:35:15,928 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+05 Mar 2026 13:35:15,929 WARN  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateConfigFilterSet:623)  - Agent configuration for 'weblog_agent' has no configfilters.
+05 Mar 2026 13:35:15,950 INFO  [main] (org.apache.flume.conf.FlumeConfiguration.validateConfiguration:163)  - Post-validation flume configuration contains configuration for agents: [weblog_agent]
+05 Mar 2026 13:35:15,951 INFO  [main] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:154)  - Creating channels
+05 Mar 2026 13:35:15,961 INFO  [main] (org.apache.flume.channel.DefaultChannelFactory.create:42)  - Creating instance of channel mem_channel type memory
+05 Mar 2026 13:35:15,969 INFO  [main] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:208)  - Created channel mem_channel
+05 Mar 2026 13:35:15,972 INFO  [main] (org.apache.flume.source.DefaultSourceFactory.create:41)  - Creating instance of source weblog_source, type exec
+05 Mar 2026 13:35:15,994 INFO  [main] (org.apache.flume.sink.DefaultSinkFactory.create:42)  - Creating instance of sink: hdfs_sink, type: hdfs
+05 Mar 2026 13:35:16,008 INFO  [main] (org.apache.flume.node.AbstractConfigurationProvider.getConfiguration:123)  - Channel mem_channel connected to [weblog_source, hdfs_sink]
+05 Mar 2026 13:35:16,010 INFO  [main] (org.apache.flume.node.Application.initializeAllComponents:177)  - Initializing components
+05 Mar 2026 13:35:16,020 INFO  [main] (org.apache.flume.node.Application.startAllComponents:207)  - Starting new configuration:{ sourceRunners:{weblog_source=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:IDLE} }} sinkRunners:{hdfs_sink=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@6f2cb653 counterGroup:{ name:null counters:{} } }} channels:{mem_channel=org.apache.flume.channel.MemoryChannel{name: mem_channel}} }
+05 Mar 2026 13:35:16,022 INFO  [main] (org.apache.flume.node.Application.startAllComponents:214)  - Starting Channel mem_channel
+05 Mar 2026 13:35:16,025 INFO  [main] (org.apache.flume.node.Application.startAllComponents:229)  - Waiting for channel: mem_channel to start. Sleeping for 500 ms
+05 Mar 2026 13:35:16,046 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: CHANNEL, name: mem_channel: Successfully registered new MBean.
+05 Mar 2026 13:35:16,049 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: CHANNEL, name: mem_channel started
+05 Mar 2026 13:35:16,527 INFO  [main] (org.apache.flume.node.Application.startAllComponents:241)  - Starting Sink hdfs_sink
+05 Mar 2026 13:35:16,532 INFO  [main] (org.apache.flume.node.Application.startAllComponents:252)  - Starting Source weblog_source
+05 Mar 2026 13:35:16,543 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.source.ExecSource.start:170)  - Exec source starting with command: tail -F /tmp/testlogs/access.log
+05 Mar 2026 13:35:16,545 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: SINK, name: hdfs_sink: Successfully registered new MBean.
+05 Mar 2026 13:35:16,550 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: SINK, name: hdfs_sink started
+05 Mar 2026 13:35:16,549 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: SOURCE, name: weblog_source: Successfully registered new MBean.
+05 Mar 2026 13:35:16,552 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: SOURCE, name: weblog_source started
+05 Mar 2026 13:35:20,600 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.hdfs.HDFSDataStream.configure:57)  - Serializer = TEXT, UseRawLocalFileSystem = false
+05 Mar 2026 13:35:20,770 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.hdfs.BucketWriter.open:246)  - Creating hdfs://localhost:9000/data/raw/weblogs/2026/03/05//weblog-.1772717720600.log.tmp
+05 Mar 2026 13:36:21,861 INFO  [hdfs-hdfs_sink-roll-timer-0] (org.apache.flume.sink.hdfs.HDFSEventSink$1.run:391)  - Writer callback called.
+05 Mar 2026 13:36:21,864 INFO  [hdfs-hdfs_sink-roll-timer-0] (org.apache.flume.sink.hdfs.BucketWriter.doClose:438)  - Closing hdfs://localhost:9000/data/raw/weblogs/2026/03/05//weblog-.1772717720600.log.tmp
+05 Mar 2026 13:36:21,979 INFO  [hdfs-hdfs_sink-call-runner-6] (org.apache.flume.sink.hdfs.BucketWriter$7.call:681)  - Renaming hdfs://localhost:9000/data/raw/weblogs/2026/03/05/weblog-.1772717720600.log.tmp to hdfs://localhost:9000/data/raw/weblogs/2026/03/05/weblog-.1772717720600.log
+05 Mar 2026 13:41:11,899 INFO  [pool-6-thread-1] (org.apache.flume.source.ExecSource$ExecRunnable.run:379)  - Command [tail -F /tmp/testlogs/access.log] exited with 129
+05 Mar 2026 13:41:11,899 INFO  [agent-shutdown-hook] (org.apache.flume.node.Application.stopAllComponents:140)  - Shutting down configuration: { sourceRunners:{weblog_source=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:START} }} sinkRunners:{hdfs_sink=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@6f2cb653 counterGroup:{ name:null counters:{runner.backoffs.consecutive=45, runner.backoffs=46} } }} channels:{mem_channel=org.apache.flume.channel.MemoryChannel{name: mem_channel}} }
+05 Mar 2026 13:41:11,919 INFO  [agent-shutdown-hook] (org.apache.flume.node.Application.stopAllComponents:144)  - Stopping Source weblog_source
+05 Mar 2026 13:41:11,923 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:START} }
+05 Mar 2026 13:41:11,925 INFO  [agent-shutdown-hook] (org.apache.flume.source.ExecSource.stop:190)  - Stopping exec source with command: tail -F /tmp/testlogs/access.log
+05 Mar 2026 13:41:11,929 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: SOURCE, name: weblog_source stopped
+05 Mar 2026 13:41:11,931 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: SOURCE, name: weblog_source. source.start.time == 1772717716552
+05 Mar 2026 13:41:11,932 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: SOURCE, name: weblog_source. source.stop.time == 1772718071929
+05 Mar 2026 13:41:11,936 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append-batch.accepted == 0
+05 Mar 2026 13:41:11,938 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append-batch.received == 0
+05 Mar 2026 13:41:11,939 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append.accepted == 0
+05 Mar 2026 13:41:11,940 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append.received == 0
+05 Mar 2026 13:41:11,942 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.channel.write.fail == 0
+05 Mar 2026 13:41:11,943 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.event.read.fail == 0
+05 Mar 2026 13:41:11,944 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.events.accepted == 3
+05 Mar 2026 13:41:11,945 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.events.received == 3
+05 Mar 2026 13:41:11,946 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.generic.processing.fail == 0
+05 Mar 2026 13:41:11,947 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.open-connection.count == 0
+05 Mar 2026 13:41:11,949 INFO  [agent-shutdown-hook] (org.apache.flume.node.Application.stopAllComponents:154)  - Stopping Sink hdfs_sink
+05 Mar 2026 13:41:11,950 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@6f2cb653 counterGroup:{ name:null counters:{runner.backoffs.consecutive=45, runner.backoffs=46} } }
+05 Mar 2026 13:41:11,967 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: SINK, name: hdfs_sink stopped
+05 Mar 2026 13:41:11,971 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.start.time == 1772717716550
+05 Mar 2026 13:41:11,975 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.stop.time == 1772718071967
+05 Mar 2026 13:41:11,976 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.batch.complete == 0
+05 Mar 2026 13:41:11,977 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.batch.empty == 47
+05 Mar 2026 13:41:11,978 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.batch.underflow == 1
+05 Mar 2026 13:41:11,979 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.channel.read.fail == 0
+05 Mar 2026 13:41:11,980 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.connection.closed.count == 1
+05 Mar 2026 13:41:11,981 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.connection.creation.count == 1
+05 Mar 2026 13:41:11,982 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.connection.failed.count == 0
+05 Mar 2026 13:41:11,984 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.event.drain.attempt == 3
+05 Mar 2026 13:41:11,985 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.event.drain.sucess == 3
+05 Mar 2026 13:41:11,986 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.event.write.fail == 0
+05 Mar 2026 13:41:11,987 INFO  [agent-shutdown-hook] (org.apache.flume.node.Application.stopAllComponents:164)  - Stopping Channel mem_channel
+05 Mar 2026 13:41:11,988 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: org.apache.flume.channel.MemoryChannel{name: mem_channel}
+05 Mar 2026 13:41:11,990 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: CHANNEL, name: mem_channel stopped
+05 Mar 2026 13:41:11,992 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.start.time == 1772717716049
+05 Mar 2026 13:41:11,993 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.stop.time == 1772718071989
+05 Mar 2026 13:41:11,993 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.capacity == 10000
+05 Mar 2026 13:41:11,994 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.current.size == 0
+05 Mar 2026 13:41:11,999 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.put.attempt == 3
+05 Mar 2026 13:41:12,000 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.put.success == 3
+05 Mar 2026 13:41:12,001 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.take.attempt == 51
+05 Mar 2026 13:41:12,002 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.take.success == 3
+05 Mar 2026 13:41:12,003 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.stop:78)  - Stopping lifecycle supervisor 19
+15 Apr 2026 07:38:18,952 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 07:38:18,960 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+15 Apr 2026 07:38:18,961 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+15 Apr 2026 07:38:18,962 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 07:38:18,963 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+15 Apr 2026 07:38:18,964 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+15 Apr 2026 07:38:18,964 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 07:38:18,965 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 07:38:18,966 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+15 Apr 2026 07:38:18,967 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+15 Apr 2026 07:38:18,967 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 07:38:18,968 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 07:38:18,969 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 07:38:18,969 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 07:38:18,970 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 07:38:18,971 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+15 Apr 2026 07:38:18,972 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 07:38:18,973 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1117)  - Added sinks: hdfs_sink Agent: weblog_agent
+15 Apr 2026 07:38:18,973 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 07:38:18,974 WARN  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateConfigFilterSet:623)  - Agent configuration for 'weblog_agent' has no configfilters.
+15 Apr 2026 07:38:18,996 INFO  [main] (org.apache.flume.conf.FlumeConfiguration.validateConfiguration:163)  - Post-validation flume configuration contains configuration for agents: [weblog_agent]
+15 Apr 2026 07:38:18,997 INFO  [main] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:154)  - Creating channels
+15 Apr 2026 07:38:19,004 INFO  [main] (org.apache.flume.channel.DefaultChannelFactory.create:42)  - Creating instance of channel mem_channel type memory
+15 Apr 2026 07:38:19,012 INFO  [main] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:208)  - Created channel mem_channel
+15 Apr 2026 07:38:19,013 INFO  [main] (org.apache.flume.source.DefaultSourceFactory.create:41)  - Creating instance of source weblog_source, type exec
+15 Apr 2026 07:38:19,024 INFO  [main] (org.apache.flume.sink.DefaultSinkFactory.create:42)  - Creating instance of sink: hdfs_sink, type: hdfs
+15 Apr 2026 07:38:19,039 INFO  [main] (org.apache.flume.node.AbstractConfigurationProvider.getConfiguration:123)  - Channel mem_channel connected to [weblog_source, hdfs_sink]
+15 Apr 2026 07:38:19,040 INFO  [main] (org.apache.flume.node.Application.initializeAllComponents:177)  - Initializing components
+15 Apr 2026 07:38:19,047 INFO  [main] (org.apache.flume.node.Application.startAllComponents:207)  - Starting new configuration:{ sourceRunners:{weblog_source=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:IDLE} }} sinkRunners:{hdfs_sink=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@6f2cb653 counterGroup:{ name:null counters:{} } }} channels:{mem_channel=org.apache.flume.channel.MemoryChannel{name: mem_channel}} }
+15 Apr 2026 07:38:19,048 INFO  [main] (org.apache.flume.node.Application.startAllComponents:214)  - Starting Channel mem_channel
+15 Apr 2026 07:38:19,050 INFO  [main] (org.apache.flume.node.Application.startAllComponents:229)  - Waiting for channel: mem_channel to start. Sleeping for 500 ms
+15 Apr 2026 07:38:19,059 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: CHANNEL, name: mem_channel: Successfully registered new MBean.
+15 Apr 2026 07:38:19,060 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: CHANNEL, name: mem_channel started
+15 Apr 2026 07:38:19,551 INFO  [main] (org.apache.flume.node.Application.startAllComponents:241)  - Starting Sink hdfs_sink
+15 Apr 2026 07:38:19,556 INFO  [main] (org.apache.flume.node.Application.startAllComponents:252)  - Starting Source weblog_source
+15 Apr 2026 07:38:19,563 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.source.ExecSource.start:170)  - Exec source starting with command: tail -F /tmp/testlogs/access.log
+15 Apr 2026 07:38:19,564 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: SINK, name: hdfs_sink: Successfully registered new MBean.
+15 Apr 2026 07:38:19,566 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: SOURCE, name: weblog_source: Successfully registered new MBean.
+15 Apr 2026 07:38:19,567 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: SINK, name: hdfs_sink started
+15 Apr 2026 07:38:19,568 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: SOURCE, name: weblog_source started
+15 Apr 2026 07:42:33,603 INFO  [agent-shutdown-hook] (org.apache.flume.node.Application.stopAllComponents:140)  - Shutting down configuration: { sourceRunners:{weblog_source=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:START} }} sinkRunners:{hdfs_sink=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@6f2cb653 counterGroup:{ name:null counters:{runner.backoffs.consecutive=33, runner.backoffs=33} } }} channels:{mem_channel=org.apache.flume.channel.MemoryChannel{name: mem_channel}} }
+15 Apr 2026 07:42:33,603 INFO  [pool-6-thread-1] (org.apache.flume.source.ExecSource$ExecRunnable.run:379)  - Command [tail -F /tmp/testlogs/access.log] exited with 129
+15 Apr 2026 07:42:33,613 INFO  [agent-shutdown-hook] (org.apache.flume.node.Application.stopAllComponents:144)  - Stopping Source weblog_source
+15 Apr 2026 07:42:33,615 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:START} }
+15 Apr 2026 07:42:33,616 INFO  [agent-shutdown-hook] (org.apache.flume.source.ExecSource.stop:190)  - Stopping exec source with command: tail -F /tmp/testlogs/access.log
+15 Apr 2026 07:42:33,619 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: SOURCE, name: weblog_source stopped
+15 Apr 2026 07:42:33,620 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: SOURCE, name: weblog_source. source.start.time == 1776238699568
+15 Apr 2026 07:42:33,621 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: SOURCE, name: weblog_source. source.stop.time == 1776238953618
+15 Apr 2026 07:42:33,623 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append-batch.accepted == 0
+15 Apr 2026 07:42:33,624 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append-batch.received == 0
+15 Apr 2026 07:42:33,624 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append.accepted == 0
+15 Apr 2026 07:42:33,625 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append.received == 0
+15 Apr 2026 07:42:33,625 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.channel.write.fail == 0
+15 Apr 2026 07:42:33,626 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.event.read.fail == 0
+15 Apr 2026 07:42:33,626 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.events.accepted == 0
+15 Apr 2026 07:42:33,627 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.events.received == 0
+15 Apr 2026 07:42:33,628 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.generic.processing.fail == 0
+15 Apr 2026 07:42:33,628 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.open-connection.count == 0
+15 Apr 2026 07:42:33,630 INFO  [agent-shutdown-hook] (org.apache.flume.node.Application.stopAllComponents:154)  - Stopping Sink hdfs_sink
+15 Apr 2026 07:42:33,630 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@6f2cb653 counterGroup:{ name:null counters:{runner.backoffs.consecutive=33, runner.backoffs=33} } }
+15 Apr 2026 07:42:33,633 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: SINK, name: hdfs_sink stopped
+15 Apr 2026 07:42:33,634 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.start.time == 1776238699566
+15 Apr 2026 07:42:33,635 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.stop.time == 1776238953633
+15 Apr 2026 07:42:33,636 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.batch.complete == 0
+15 Apr 2026 07:42:33,638 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.batch.empty == 33
+15 Apr 2026 07:42:33,639 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.batch.underflow == 0
+15 Apr 2026 07:42:33,640 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.channel.read.fail == 0
+15 Apr 2026 07:42:33,641 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.connection.closed.count == 0
+15 Apr 2026 07:42:33,641 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.connection.creation.count == 0
+15 Apr 2026 07:42:33,642 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.connection.failed.count == 0
+15 Apr 2026 07:42:33,642 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.event.drain.attempt == 0
+15 Apr 2026 07:42:33,643 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.event.drain.sucess == 0
+15 Apr 2026 07:42:33,643 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.event.write.fail == 0
+15 Apr 2026 07:42:33,644 INFO  [agent-shutdown-hook] (org.apache.flume.node.Application.stopAllComponents:164)  - Stopping Channel mem_channel
+15 Apr 2026 07:42:33,644 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: org.apache.flume.channel.MemoryChannel{name: mem_channel}
+15 Apr 2026 07:42:33,644 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: CHANNEL, name: mem_channel stopped
+15 Apr 2026 07:42:33,645 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.start.time == 1776238699060
+15 Apr 2026 07:42:33,645 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.stop.time == 1776238953644
+15 Apr 2026 07:42:33,645 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.capacity == 10000
+15 Apr 2026 07:42:33,647 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.current.size == 0
+15 Apr 2026 07:42:33,647 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.put.attempt == 0
+15 Apr 2026 07:42:33,648 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.put.success == 0
+15 Apr 2026 07:42:33,648 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.take.attempt == 33
+15 Apr 2026 07:42:33,648 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.take.success == 0
+15 Apr 2026 07:42:33,649 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.stop:78)  - Stopping lifecycle supervisor 19
+15 Apr 2026 18:04:34,691 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 18:04:34,698 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+15 Apr 2026 18:04:34,699 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+15 Apr 2026 18:04:34,701 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 18:04:34,702 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+15 Apr 2026 18:04:34,703 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+15 Apr 2026 18:04:34,704 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 18:04:34,705 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 18:04:34,707 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+15 Apr 2026 18:04:34,708 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+15 Apr 2026 18:04:34,710 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 18:04:34,711 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 18:04:34,713 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 18:04:34,714 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 18:04:34,715 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 18:04:34,717 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+15 Apr 2026 18:04:34,718 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 18:04:34,719 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1117)  - Added sinks: hdfs_sink Agent: weblog_agent
+15 Apr 2026 18:04:34,720 INFO  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:hdfs_sink
+15 Apr 2026 18:04:34,721 WARN  [main] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateConfigFilterSet:623)  - Agent configuration for 'weblog_agent' has no configfilters.
+15 Apr 2026 18:04:34,746 INFO  [main] (org.apache.flume.conf.FlumeConfiguration.validateConfiguration:163)  - Post-validation flume configuration contains configuration for agents: [weblog_agent]
+15 Apr 2026 18:04:34,749 INFO  [main] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:154)  - Creating channels
+15 Apr 2026 18:04:34,757 INFO  [main] (org.apache.flume.channel.DefaultChannelFactory.create:42)  - Creating instance of channel mem_channel type memory
+15 Apr 2026 18:04:34,766 INFO  [main] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:208)  - Created channel mem_channel
+15 Apr 2026 18:04:34,770 INFO  [main] (org.apache.flume.source.DefaultSourceFactory.create:41)  - Creating instance of source weblog_source, type exec
+15 Apr 2026 18:04:34,780 INFO  [main] (org.apache.flume.sink.DefaultSinkFactory.create:42)  - Creating instance of sink: hdfs_sink, type: hdfs
+15 Apr 2026 18:04:34,792 INFO  [main] (org.apache.flume.node.AbstractConfigurationProvider.getConfiguration:123)  - Channel mem_channel connected to [weblog_source, hdfs_sink]
+15 Apr 2026 18:04:34,793 INFO  [main] (org.apache.flume.node.Application.initializeAllComponents:177)  - Initializing components
+15 Apr 2026 18:04:34,802 INFO  [main] (org.apache.flume.node.Application.startAllComponents:207)  - Starting new configuration:{ sourceRunners:{weblog_source=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:IDLE} }} sinkRunners:{hdfs_sink=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@6f2cb653 counterGroup:{ name:null counters:{} } }} channels:{mem_channel=org.apache.flume.channel.MemoryChannel{name: mem_channel}} }
+15 Apr 2026 18:04:34,803 INFO  [main] (org.apache.flume.node.Application.startAllComponents:214)  - Starting Channel mem_channel
+15 Apr 2026 18:04:34,806 INFO  [main] (org.apache.flume.node.Application.startAllComponents:229)  - Waiting for channel: mem_channel to start. Sleeping for 500 ms
+15 Apr 2026 18:04:34,811 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: CHANNEL, name: mem_channel: Successfully registered new MBean.
+15 Apr 2026 18:04:34,812 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: CHANNEL, name: mem_channel started
+15 Apr 2026 18:04:35,307 INFO  [main] (org.apache.flume.node.Application.startAllComponents:241)  - Starting Sink hdfs_sink
+15 Apr 2026 18:04:35,310 INFO  [main] (org.apache.flume.node.Application.startAllComponents:252)  - Starting Source weblog_source
+15 Apr 2026 18:04:35,315 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.source.ExecSource.start:170)  - Exec source starting with command: tail -F /tmp/testlogs/access.log
+15 Apr 2026 18:04:35,328 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: SOURCE, name: weblog_source: Successfully registered new MBean.
+15 Apr 2026 18:04:35,329 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: SINK, name: hdfs_sink: Successfully registered new MBean.
+15 Apr 2026 18:04:35,334 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: SOURCE, name: weblog_source started
+15 Apr 2026 18:04:35,344 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: SINK, name: hdfs_sink started
+15 Apr 2026 18:08:35,523 INFO  [conf-file-poller-0] (org.apache.flume.node.FileConfigurationSource.isModified:84)  - Reloading configuration file:/mnt/c/Users/Acer/OneDrive/Desktop/Ecommerce-pipeline/ingestion/flume/weblog_flume.conf
+15 Apr 2026 18:08:35,940 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+15 Apr 2026 18:08:35,943 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+15 Apr 2026 18:08:35,944 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+15 Apr 2026 18:08:35,945 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+15 Apr 2026 18:08:35,947 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+15 Apr 2026 18:08:35,948 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+15 Apr 2026 18:08:35,948 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:file_sink
+15 Apr 2026 18:08:35,949 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:file_sink
+15 Apr 2026 18:08:35,950 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+15 Apr 2026 18:08:35,951 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:file_sink
+15 Apr 2026 18:08:35,953 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1117)  - Added sinks: file_sink Agent: weblog_agent
+15 Apr 2026 18:08:35,954 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:file_sink
+15 Apr 2026 18:08:35,956 WARN  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateConfigFilterSet:623)  - Agent configuration for 'weblog_agent' has no configfilters.
+15 Apr 2026 18:08:36,100 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration.validateConfiguration:163)  - Post-validation flume configuration contains configuration for agents: [weblog_agent]
+15 Apr 2026 18:08:36,107 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:154)  - Creating channels
+15 Apr 2026 18:08:36,154 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:208)  - Created channel mem_channel
+15 Apr 2026 18:08:36,158 INFO  [conf-file-poller-0] (org.apache.flume.source.DefaultSourceFactory.create:41)  - Creating instance of source weblog_source, type exec
+15 Apr 2026 18:08:36,195 INFO  [conf-file-poller-0] (org.apache.flume.sink.DefaultSinkFactory.create:42)  - Creating instance of sink: file_sink, type: file_roll
+15 Apr 2026 18:08:36,346 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.getConfiguration:123)  - Channel mem_channel connected to [weblog_source, file_sink]
+15 Apr 2026 18:08:36,558 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.stopAllComponents:140)  - Shutting down configuration: { sourceRunners:{weblog_source=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:START} }} sinkRunners:{hdfs_sink=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@6f2cb653 counterGroup:{ name:null counters:{runner.backoffs.consecutive=32, runner.backoffs=32} } }} channels:{mem_channel=org.apache.flume.channel.MemoryChannel{name: mem_channel}} }
+15 Apr 2026 18:08:36,562 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.stopAllComponents:144)  - Stopping Source weblog_source
+15 Apr 2026 18:08:36,565 INFO  [conf-file-poller-0] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:START} }
+15 Apr 2026 18:08:36,568 INFO  [conf-file-poller-0] (org.apache.flume.source.ExecSource.stop:190)  - Stopping exec source with command: tail -F /tmp/testlogs/access.log
+15 Apr 2026 18:08:36,668 INFO  [pool-6-thread-1] (org.apache.flume.source.ExecSource$ExecRunnable.run:379)  - Command [tail -F /tmp/testlogs/access.log] exited with 143
+15 Apr 2026 18:08:36,676 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: SOURCE, name: weblog_source stopped
+15 Apr 2026 18:08:36,677 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: SOURCE, name: weblog_source. source.start.time == 1776276275334
+15 Apr 2026 18:08:36,679 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: SOURCE, name: weblog_source. source.stop.time == 1776276516674
+15 Apr 2026 18:08:36,686 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append-batch.accepted == 0
+15 Apr 2026 18:08:36,687 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append-batch.received == 0
+15 Apr 2026 18:08:36,688 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append.accepted == 0
+15 Apr 2026 18:08:36,690 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append.received == 0
+15 Apr 2026 18:08:36,691 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.channel.write.fail == 0
+15 Apr 2026 18:08:36,692 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.event.read.fail == 0
+15 Apr 2026 18:08:36,693 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.events.accepted == 0
+15 Apr 2026 18:08:36,694 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.events.received == 0
+15 Apr 2026 18:08:36,695 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.generic.processing.fail == 0
+15 Apr 2026 18:08:36,696 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.open-connection.count == 0
+15 Apr 2026 18:08:36,698 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.stopAllComponents:154)  - Stopping Sink hdfs_sink
+15 Apr 2026 18:08:36,699 INFO  [conf-file-poller-0] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@6f2cb653 counterGroup:{ name:null counters:{runner.backoffs.consecutive=32, runner.backoffs=32} } }
+15 Apr 2026 18:08:36,706 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: SINK, name: hdfs_sink stopped
+15 Apr 2026 18:08:36,707 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.start.time == 1776276275344
+15 Apr 2026 18:08:36,709 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.stop.time == 1776276516706
+15 Apr 2026 18:08:36,710 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.batch.complete == 0
+15 Apr 2026 18:08:36,710 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.batch.empty == 32
+15 Apr 2026 18:08:36,711 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.batch.underflow == 0
+15 Apr 2026 18:08:36,712 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.channel.read.fail == 0
+15 Apr 2026 18:08:36,714 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.connection.closed.count == 0
+15 Apr 2026 18:08:36,714 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.connection.creation.count == 0
+15 Apr 2026 18:08:36,715 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.connection.failed.count == 0
+15 Apr 2026 18:08:36,716 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.event.drain.attempt == 0
+15 Apr 2026 18:08:36,717 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.event.drain.sucess == 0
+15 Apr 2026 18:08:36,718 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: hdfs_sink. sink.event.write.fail == 0
+15 Apr 2026 18:08:36,718 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.stopAllComponents:164)  - Stopping Channel mem_channel
+15 Apr 2026 18:08:36,719 INFO  [conf-file-poller-0] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: org.apache.flume.channel.MemoryChannel{name: mem_channel}
+15 Apr 2026 18:08:36,720 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: CHANNEL, name: mem_channel stopped
+15 Apr 2026 18:08:36,721 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.start.time == 1776276274812
+15 Apr 2026 18:08:36,722 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.stop.time == 1776276516720
+15 Apr 2026 18:08:36,724 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.capacity == 10000
+15 Apr 2026 18:08:36,725 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.current.size == 0
+15 Apr 2026 18:08:36,726 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.put.attempt == 0
+15 Apr 2026 18:08:36,727 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.put.success == 0
+15 Apr 2026 18:08:36,728 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.take.attempt == 32
+15 Apr 2026 18:08:36,729 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.take.success == 0
+15 Apr 2026 18:08:36,731 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.initializeAllComponents:177)  - Initializing components
+15 Apr 2026 18:08:36,731 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:207)  - Starting new configuration:{ sourceRunners:{weblog_source=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:IDLE} }} sinkRunners:{file_sink=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@6c25b548 counterGroup:{ name:null counters:{} } }} channels:{mem_channel=org.apache.flume.channel.MemoryChannel{name: mem_channel}} }
+15 Apr 2026 18:08:36,734 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:214)  - Starting Channel mem_channel
+15 Apr 2026 18:08:36,735 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:229)  - Waiting for channel: mem_channel to start. Sleeping for 500 ms
+15 Apr 2026 18:08:36,737 INFO  [lifecycleSupervisor-1-6] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: CHANNEL, name: mem_channel started
+15 Apr 2026 18:08:37,237 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:241)  - Starting Sink file_sink
+15 Apr 2026 18:08:37,239 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:252)  - Starting Source weblog_source
+15 Apr 2026 18:08:37,239 INFO  [lifecycleSupervisor-1-2] (org.apache.flume.sink.RollingFileSink.start:111)  - Starting org.apache.flume.sink.RollingFileSink{name:file_sink, channel:mem_channel}...
+15 Apr 2026 18:08:37,243 INFO  [lifecycleSupervisor-1-4] (org.apache.flume.source.ExecSource.start:170)  - Exec source starting with command: tail -F /tmp/testlogs/access.log
+15 Apr 2026 18:08:37,265 INFO  [lifecycleSupervisor-1-2] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: SINK, name: file_sink: Successfully registered new MBean.
+15 Apr 2026 18:08:37,267 INFO  [lifecycleSupervisor-1-2] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: SINK, name: file_sink started
+15 Apr 2026 18:08:37,268 INFO  [lifecycleSupervisor-1-4] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: SOURCE, name: weblog_source: Successfully registered new MBean.
+15 Apr 2026 18:08:37,270 INFO  [lifecycleSupervisor-1-4] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: SOURCE, name: weblog_source started
+15 Apr 2026 18:08:37,286 INFO  [lifecycleSupervisor-1-2] (org.apache.flume.sink.RollingFileSink.start:143)  - RollingFileSink file_sink started.
+15 Apr 2026 18:08:37,308 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:08:42,515 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:08:47,522 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:08:52,528 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:08:57,536 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:09:02,538 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:09:07,544 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:09:12,554 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:09:17,559 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:09:22,566 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:09:27,571 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:09:32,575 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:09:37,578 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:09:42,580 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:09:47,583 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:09:52,586 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:09:57,590 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:10:02,594 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:10:07,598 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:10:12,601 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:10:17,610 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:10:22,615 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:10:27,618 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:10:32,622 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:10:37,627 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:10:42,631 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:10:47,634 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:10:52,640 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:10:57,642 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:11:02,646 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:11:07,649 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+15 Apr 2026 18:11:12,652 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to open file /tmp/flume_output/1776276516341-1 while delivering event
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:185) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:39) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]
+Caused by: java.io.FileNotFoundException: /tmp/flume_output/1776276516341-1 (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at org.apache.flume.sink.RollingFileSink.process(RollingFileSink.java:176) ~[flume-ng-core-1.11.0.jar:1.11.0]
+	... 3 more
+16 Apr 2026 07:39:59,490 INFO  [conf-file-poller-0] (org.apache.flume.node.FileConfigurationSource.isModified:84)  - Reloading configuration file:/mnt/c/Users/Acer/OneDrive/Desktop/Ecommerce-pipeline/ingestion/flume/weblog_flume.conf
+16 Apr 2026 07:39:59,680 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+16 Apr 2026 07:39:59,681 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+16 Apr 2026 07:39:59,682 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+16 Apr 2026 07:39:59,683 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+16 Apr 2026 07:39:59,685 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:weblog_source
+16 Apr 2026 07:39:59,686 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+16 Apr 2026 07:39:59,686 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:file_sink
+16 Apr 2026 07:39:59,687 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:file_sink
+16 Apr 2026 07:39:59,688 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:mem_channel
+16 Apr 2026 07:39:59,688 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:file_sink
+16 Apr 2026 07:39:59,689 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1117)  - Added sinks: file_sink Agent: weblog_agent
+16 Apr 2026 07:39:59,690 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addComponentConfig:1203)  - Processing:file_sink
+16 Apr 2026 07:39:59,692 WARN  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.validateConfigFilterSet:623)  - Agent configuration for 'weblog_agent' has no configfilters.
+16 Apr 2026 07:39:59,738 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration.validateConfiguration:163)  - Post-validation flume configuration contains configuration for agents: [weblog_agent]
+16 Apr 2026 07:39:59,744 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:154)  - Creating channels
+16 Apr 2026 07:39:59,751 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:208)  - Created channel mem_channel
+16 Apr 2026 07:39:59,758 INFO  [conf-file-poller-0] (org.apache.flume.source.DefaultSourceFactory.create:41)  - Creating instance of source weblog_source, type exec
+16 Apr 2026 07:39:59,773 INFO  [conf-file-poller-0] (org.apache.flume.sink.DefaultSinkFactory.create:42)  - Creating instance of sink: file_sink, type: file_roll
+16 Apr 2026 07:39:59,778 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.getConfiguration:123)  - Channel mem_channel connected to [weblog_source, file_sink]
+16 Apr 2026 07:39:59,802 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.stopAllComponents:140)  - Shutting down configuration: { sourceRunners:{weblog_source=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:START} }} sinkRunners:{file_sink=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@6c25b548 counterGroup:{ name:null counters:{runner.deliveryErrors=32, runner.backoffs.consecutive=285, runner.backoffs=285} } }} channels:{mem_channel=org.apache.flume.channel.MemoryChannel{name: mem_channel}} }
+16 Apr 2026 07:39:59,806 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.stopAllComponents:144)  - Stopping Source weblog_source
+16 Apr 2026 07:39:59,808 INFO  [conf-file-poller-0] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:START} }
+16 Apr 2026 07:39:59,810 INFO  [conf-file-poller-0] (org.apache.flume.source.ExecSource.stop:190)  - Stopping exec source with command: tail -F /tmp/testlogs/access.log
+16 Apr 2026 07:39:59,872 INFO  [pool-9-thread-1] (org.apache.flume.source.ExecSource$ExecRunnable.run:379)  - Command [tail -F /tmp/testlogs/access.log] exited with 143
+16 Apr 2026 07:39:59,877 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: SOURCE, name: weblog_source stopped
+16 Apr 2026 07:39:59,880 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: SOURCE, name: weblog_source. source.start.time == 1776276517269
+16 Apr 2026 07:39:59,881 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: SOURCE, name: weblog_source. source.stop.time == 1776325199875
+16 Apr 2026 07:39:59,883 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append-batch.accepted == 0
+16 Apr 2026 07:39:59,886 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append-batch.received == 0
+16 Apr 2026 07:39:59,887 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append.accepted == 0
+16 Apr 2026 07:39:59,892 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append.received == 0
+16 Apr 2026 07:39:59,893 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.channel.write.fail == 0
+16 Apr 2026 07:39:59,894 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.event.read.fail == 0
+16 Apr 2026 07:39:59,895 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.events.accepted == 0
+16 Apr 2026 07:39:59,896 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.events.received == 0
+16 Apr 2026 07:39:59,897 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.generic.processing.fail == 0
+16 Apr 2026 07:39:59,898 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.open-connection.count == 0
+16 Apr 2026 07:39:59,899 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.stopAllComponents:154)  - Stopping Sink file_sink
+16 Apr 2026 07:39:59,900 INFO  [conf-file-poller-0] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@6c25b548 counterGroup:{ name:null counters:{runner.deliveryErrors=32, runner.backoffs.consecutive=285, runner.backoffs=285} } }
+16 Apr 2026 07:39:59,900 INFO  [lifecycleSupervisor-1-3] (org.apache.flume.lifecycle.LifecycleSupervisor$MonitorRunnable.run:228)  - Component has already been stopped EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:STOP} }
+16 Apr 2026 07:39:59,903 INFO  [conf-file-poller-0] (org.apache.flume.sink.RollingFileSink.stop:236)  - RollingFile sink file_sink stopping...
+16 Apr 2026 07:39:59,904 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: SINK, name: file_sink stopped
+16 Apr 2026 07:39:59,905 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: SINK, name: file_sink. sink.start.time == 1776276517266
+16 Apr 2026 07:39:59,906 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: SINK, name: file_sink. sink.stop.time == 1776325199904
+16 Apr 2026 07:39:59,907 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.batch.complete == 0
+16 Apr 2026 07:39:59,907 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.batch.empty == 0
+16 Apr 2026 07:39:59,908 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.batch.underflow == 0
+16 Apr 2026 07:39:59,909 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.channel.read.fail == 0
+16 Apr 2026 07:39:59,910 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.connection.closed.count == 76
+16 Apr 2026 07:39:59,911 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.connection.creation.count == 77
+16 Apr 2026 07:39:59,912 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.connection.failed.count == 32
+16 Apr 2026 07:39:59,913 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.event.drain.attempt == 0
+16 Apr 2026 07:39:59,914 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.event.drain.sucess == 0
+16 Apr 2026 07:39:59,915 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.event.write.fail == 0
+16 Apr 2026 07:39:59,918 INFO  [conf-file-poller-0] (org.apache.flume.sink.RollingFileSink.stop:268)  - RollingFile sink file_sink stopped. Event metrics: SINK:file_sink{sink.batch.underflow=0, sink.event.write.fail=0, sink.connection.failed.count=32, sink.channel.read.fail=0, sink.connection.closed.count=77, sink.event.drain.attempt=0, sink.batch.complete=0, sink.event.drain.sucess=0, sink.connection.creation.count=77, sink.batch.empty=0}
+16 Apr 2026 07:39:59,919 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.stopAllComponents:164)  - Stopping Channel mem_channel
+16 Apr 2026 07:39:59,919 INFO  [conf-file-poller-0] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: org.apache.flume.channel.MemoryChannel{name: mem_channel}
+16 Apr 2026 07:39:59,921 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: CHANNEL, name: mem_channel stopped
+16 Apr 2026 07:39:59,922 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.start.time == 1776276516735
+16 Apr 2026 07:39:59,923 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.stop.time == 1776325199920
+16 Apr 2026 07:39:59,923 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.capacity == 1000
+16 Apr 2026 07:39:59,924 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.current.size == 0
+16 Apr 2026 07:39:59,925 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.put.attempt == 0
+16 Apr 2026 07:39:59,925 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.put.success == 0
+16 Apr 2026 07:39:59,926 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.take.attempt == 285
+16 Apr 2026 07:39:59,927 INFO  [conf-file-poller-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.take.success == 0
+16 Apr 2026 07:39:59,929 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.initializeAllComponents:177)  - Initializing components
+16 Apr 2026 07:39:59,931 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:207)  - Starting new configuration:{ sourceRunners:{weblog_source=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:IDLE} }} sinkRunners:{file_sink=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@69c30d3e counterGroup:{ name:null counters:{} } }} channels:{mem_channel=org.apache.flume.channel.MemoryChannel{name: mem_channel}} }
+16 Apr 2026 07:39:59,932 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:214)  - Starting Channel mem_channel
+16 Apr 2026 07:39:59,932 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:229)  - Waiting for channel: mem_channel to start. Sleeping for 500 ms
+16 Apr 2026 07:39:59,934 INFO  [lifecycleSupervisor-1-5] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: CHANNEL, name: mem_channel started
+16 Apr 2026 07:40:00,462 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:241)  - Starting Sink file_sink
+16 Apr 2026 07:40:00,464 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:252)  - Starting Source weblog_source
+16 Apr 2026 07:40:00,469 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.source.ExecSource.start:170)  - Exec source starting with command: tail -F /tmp/testlogs/access.log
+16 Apr 2026 07:40:00,469 INFO  [lifecycleSupervisor-1-6] (org.apache.flume.sink.RollingFileSink.start:111)  - Starting org.apache.flume.sink.RollingFileSink{name:file_sink, channel:mem_channel}...
+16 Apr 2026 07:40:00,490 INFO  [lifecycleSupervisor-1-6] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: SINK, name: file_sink: Successfully registered new MBean.
+16 Apr 2026 07:40:00,490 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: SOURCE, name: weblog_source: Successfully registered new MBean.
+16 Apr 2026 07:40:00,491 INFO  [lifecycleSupervisor-1-6] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: SINK, name: file_sink started
+16 Apr 2026 07:40:00,492 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: SOURCE, name: weblog_source started
+16 Apr 2026 07:40:00,500 INFO  [lifecycleSupervisor-1-6] (org.apache.flume.sink.RollingFileSink.start:143)  - RollingFileSink file_sink started.
+18 Apr 2026 17:15:25,817 INFO  [agent-shutdown-hook] (org.apache.flume.node.Application.stopAllComponents:140)  - Shutting down configuration: { sourceRunners:{weblog_source=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:START} }} sinkRunners:{file_sink=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@69c30d3e counterGroup:{ name:null counters:{runner.backoffs.consecutive=1975, runner.backoffs=1975} } }} channels:{mem_channel=org.apache.flume.channel.MemoryChannel{name: mem_channel}} }
+18 Apr 2026 17:15:25,890 INFO  [agent-shutdown-hook] (org.apache.flume.node.Application.stopAllComponents:144)  - Stopping Source weblog_source
+18 Apr 2026 17:15:25,895 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:weblog_source,state:START} }
+18 Apr 2026 17:15:25,896 INFO  [agent-shutdown-hook] (org.apache.flume.source.ExecSource.stop:190)  - Stopping exec source with command: tail -F /tmp/testlogs/access.log
+18 Apr 2026 17:15:25,933 INFO  [pool-12-thread-1] (org.apache.flume.source.ExecSource$ExecRunnable.run:379)  - Command [tail -F /tmp/testlogs/access.log] exited with 143
+18 Apr 2026 17:15:25,936 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: SOURCE, name: weblog_source stopped
+18 Apr 2026 17:15:25,940 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: SOURCE, name: weblog_source. source.start.time == 1776325200491
+18 Apr 2026 17:15:25,942 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: SOURCE, name: weblog_source. source.stop.time == 1776532525935
+18 Apr 2026 17:15:25,945 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append-batch.accepted == 0
+18 Apr 2026 17:15:25,946 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append-batch.received == 0
+18 Apr 2026 17:15:25,946 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append.accepted == 0
+18 Apr 2026 17:15:25,947 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.append.received == 0
+18 Apr 2026 17:15:25,948 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.channel.write.fail == 0
+18 Apr 2026 17:15:25,948 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.event.read.fail == 0
+18 Apr 2026 17:15:25,950 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.events.accepted == 0
+18 Apr 2026 17:15:25,951 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.events.received == 0
+18 Apr 2026 17:15:25,951 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.generic.processing.fail == 0
+18 Apr 2026 17:15:25,952 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: weblog_source. src.open-connection.count == 0
+18 Apr 2026 17:15:25,953 INFO  [agent-shutdown-hook] (org.apache.flume.node.Application.stopAllComponents:154)  - Stopping Sink file_sink
+18 Apr 2026 17:15:25,954 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@69c30d3e counterGroup:{ name:null counters:{runner.backoffs.consecutive=1975, runner.backoffs=1975} } }
+18 Apr 2026 17:15:25,960 INFO  [agent-shutdown-hook] (org.apache.flume.sink.RollingFileSink.stop:236)  - RollingFile sink file_sink stopping...
+18 Apr 2026 17:15:25,963 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: SINK, name: file_sink stopped
+18 Apr 2026 17:15:25,963 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: SINK, name: file_sink. sink.start.time == 1776325200491
+18 Apr 2026 17:15:25,964 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: SINK, name: file_sink. sink.stop.time == 1776532525962
+18 Apr 2026 17:15:25,965 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.batch.complete == 0
+18 Apr 2026 17:15:25,966 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.batch.empty == 0
+18 Apr 2026 17:15:25,966 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.batch.underflow == 0
+18 Apr 2026 17:15:25,967 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.channel.read.fail == 0
+18 Apr 2026 17:15:25,967 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.connection.closed.count == 528
+18 Apr 2026 17:15:25,968 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.connection.creation.count == 529
+18 Apr 2026 17:15:25,968 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.connection.failed.count == 0
+18 Apr 2026 17:15:25,969 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.event.drain.attempt == 0
+18 Apr 2026 17:15:25,970 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.event.drain.sucess == 0
+18 Apr 2026 17:15:25,970 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: file_sink. sink.event.write.fail == 0
+18 Apr 2026 17:15:25,978 INFO  [agent-shutdown-hook] (org.apache.flume.sink.RollingFileSink.stop:268)  - RollingFile sink file_sink stopped. Event metrics: SINK:file_sink{sink.batch.underflow=0, sink.event.write.fail=0, sink.connection.failed.count=0, sink.channel.read.fail=0, sink.connection.closed.count=529, sink.event.drain.attempt=0, sink.batch.complete=0, sink.event.drain.sucess=0, sink.connection.creation.count=529, sink.batch.empty=0}
+18 Apr 2026 17:15:25,981 INFO  [agent-shutdown-hook] (org.apache.flume.node.Application.stopAllComponents:164)  - Stopping Channel mem_channel
+18 Apr 2026 17:15:25,982 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.unsupervise:169)  - Stopping component: org.apache.flume.channel.MemoryChannel{name: mem_channel}
+18 Apr 2026 17:15:25,984 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: CHANNEL, name: mem_channel stopped
+18 Apr 2026 17:15:25,984 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.start.time == 1776325199934
+18 Apr 2026 17:15:25,985 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.stop.time == 1776532525984
+18 Apr 2026 17:15:25,987 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.capacity == 1000
+18 Apr 2026 17:15:25,988 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.current.size == 0
+18 Apr 2026 17:15:25,988 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.put.attempt == 0
+18 Apr 2026 17:15:25,989 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.put.success == 0
+18 Apr 2026 17:15:25,990 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.take.attempt == 1976
+18 Apr 2026 17:15:25,990 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: mem_channel. channel.event.take.success == 0
+18 Apr 2026 17:15:25,991 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.stop:78)  - Stopping lifecycle supervisor 19

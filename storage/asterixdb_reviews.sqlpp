@@ -1,0 +1,16 @@
+CREATE DATAVERSE ecommerce IF NOT EXISTS;
+USE ecommerce;
+
+CREATE TYPE ReviewType AS {
+  review_id:   string,
+  customer_id: string,
+  product_id:  string,
+  rating:      double,
+  review_text: string,
+  review_date: string,
+  sentiment:   string?
+};
+
+CREATE DATASET ProductReviews(ReviewType) PRIMARY KEY review_id;
+CREATE INDEX idx_product  ON ProductReviews (product_id);
+CREATE INDEX idx_customer ON ProductReviews (customer_id);
